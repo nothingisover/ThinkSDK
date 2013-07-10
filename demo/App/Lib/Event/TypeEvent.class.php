@@ -38,7 +38,7 @@ class TypeEvent{
 			$userInfo['type'] = 'TENCENT';
 			$userInfo['name'] = $data['data']['name'];
 			$userInfo['nick'] = $data['data']['nick'];
-			$userInfo['head'] = $data['data']['head'];
+			$userInfo['head'] = $data['data']['head'].'/50'; // 腾讯微博头像预设为50大小，否则会加载不了头像
 			return $userInfo;
 		} else {
 			throw_exception("获取腾讯微博用户信息失败：{$data['msg']}");
